@@ -1,4 +1,4 @@
-# OrderProcessingDemo
+# OrderProcessingConsoleDemo
 
 This is a simple .NET console application that demonstrates the **value of software testing** by showcasing different types of automated tests with xUnit:
 
@@ -39,7 +39,7 @@ The project uses an in-memory data model to simulate order processing and option
 dotnet build
 
 ### Run the app
-dotnet run --project OrderProcessingDemo
+dotnet run --project OrderProcessingConsoleDemo
 
 ### Run all tests
 dotnet test
