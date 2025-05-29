@@ -45,12 +45,14 @@ dotnet run --project OrderProcessingDemo
 dotnet test
 
 ## ⚙️ Project Structure
+```bash
 /OrderProcessingConsoleDemo         # Main console application
 /OrderProcessingConsoleDemo.Tests   # Unit, integration and E2E tests
   /Unit
   /Integration
   /E2E
 .github/workflows/ci.yml     # GitHub Actions CI pipeline
+```
 
 ## 🛠 Technologies Used
 .NET 9 Console App
