@@ -11,9 +11,11 @@ namespace OrderProcessingConsoleDemo.Tests.E2E
         [Fact]
         public async Task RunningApp_CreatesDatabaseAndOutputsExpectedResult()
         {
-            // Set the working directory to the folder containing the project file.
-            // This ensures that 'dotnet run' executes in the correct context.
-            var projectDir = @"C:\Add_Your_Project_Path_Here\OrderProcessingConsoleDemo\OrderProcessingConsoleDemo";
+            // Ensure the project path is correct relative to the test assembly.
+            var projectPath = Path.GetFullPath(
+                Path.Combine(AppContext.BaseDirectory, "../../../../OrderProcessingConsoleDemo/OrderProcessingConsoleDemo.csproj"));
+
+            Assert.True(File.Exists(projectPath), $"Project file not found: {projectPath}");            
 
             // Variable to capture the application's output.
             var output = string.Empty;
@@ -21,9 +23,8 @@ namespace OrderProcessingConsoleDemo.Tests.E2E
             // Configure the process start info to run the application using 'dotnet run'.
             // --project OrderProcessingConsoleDemo specifies which project to run.
             // RedirectStandardOutput and RedirectStandardError allow capturing console output.
-            var psi = new ProcessStartInfo("dotnet", "run --project OrderProcessingConsoleDemo")
+            var psi = new ProcessStartInfo("dotnet", $"run --project \"{projectPath}\"")            
             {
-                WorkingDirectory = projectDir,
                 RedirectStandardOutput = true,
                 RedirectStandardError = true,
                 UseShellExecute = false
@@ -33,6 +34,13 @@ namespace OrderProcessingConsoleDemo.Tests.E2E
             using var process = Process.Start(psi)!;
             output = await process.StandardOutput.ReadToEndAsync();
             await process.WaitForExitAsync();
+
+            // Check if the process exited successfully. 
+            var errorOutput = await process.StandardError.ReadToEndAsync();
+            if (process.ExitCode != 0)
+            {
+                throw new Exception($"dotnet run failed: {errorOutput}");
+            }            
 
             // Assert that the output contains the expected customer and total.
             // This verifies both correct business logic and successful execution.
