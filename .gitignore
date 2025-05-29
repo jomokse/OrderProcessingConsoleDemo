@@ -1,0 +1,37 @@
+# Build-files
+bin/
+obj/
+
+# User-specific files
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code
+.vscode/
+
+# TestResults
+TestResults/
+*.ncrunch*
+*.coverage
+*.coveragexml
+
+# databases
+*.db
+*.sqlite
+*.mdf
+*.ldf
+
+# Secrets / configurations
+secrets.json
+
+# EF Migrations
+# Migrations/
+
+# Logs
+*.log
+
+# dotnet tools
+.tool/

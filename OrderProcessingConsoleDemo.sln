@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderProcessingConsoleDemo", "OrderProcessingConsoleDemo\OrderProcessingConsoleDemo.csproj", "{F92BE922-8847-474D-A994-135B5E1D6287}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderProcessingConsoleDemo.Tests", "OrderProcessingConsoleDemo.Tests\OrderProcessingConsoleDemo.Tests.csproj", "{14D4A7CC-56A5-4F92-AC63-94ACA23C5930}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F92BE922-8847-474D-A994-135B5E1D6287}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F92BE922-8847-474D-A994-135B5E1D6287}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F92BE922-8847-474D-A994-135B5E1D6287}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F92BE922-8847-474D-A994-135B5E1D6287}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14D4A7CC-56A5-4F92-AC63-94ACA23C5930}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14D4A7CC-56A5-4F92-AC63-94ACA23C5930}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14D4A7CC-56A5-4F92-AC63-94ACA23C5930}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14D4A7CC-56A5-4F92-AC63-94ACA23C5930}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
