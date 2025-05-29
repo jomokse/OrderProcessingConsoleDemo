@@ -1,6 +1,6 @@
 # OrderProcessingDemo
 
-This is a simple .NET console application that demonstrates the **value of software testing** by showcasing different types of automated tests:
+This is a simple .NET console application that demonstrates the **value of software testing** by showcasing different types of automated tests with xUnit:
 
 - ✅ **Unit tests**
 - ✅ **Integration tests**
@@ -45,11 +45,11 @@ dotnet run --project OrderProcessingDemo
 dotnet test
 
 ## ⚙️ Project Structure
-OrderProcessingConsoleDemo/         # Main console application
-OrderProcessingConsoleDemo.Tests/   # Unit, integration and E2E tests
-  ├── Unit/
-  ├── Integration/
-  └── E2E/
+/OrderProcessingConsoleDemo         # Main console application
+/OrderProcessingConsoleDemo.Tests   # Unit, integration and E2E tests
+  /Unit
+  /Integration
+  /E2E
 .github/workflows/ci.yml     # GitHub Actions CI pipeline
 
 ## 🛠 Technologies Used
